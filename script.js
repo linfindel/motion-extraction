@@ -80,3 +80,17 @@ function setTimeframe() {
 
     timeframe = timeframe / 1000;
 }
+
+function toggleTransparency() {
+    if (document.getElementById("overlay-video").style.mixBlendMode) {
+        document.getElementById("overlay-video").style.mixBlendMode = "";
+
+        document.getElementById("transparency-icon").innerText = "toggle_off"
+    }
+
+    else {
+        document.getElementById("overlay-video").style.mixBlendMode = "multiply";
+
+        document.getElementById("transparency-icon").innerText = "toggle_on"
+    }
+}
